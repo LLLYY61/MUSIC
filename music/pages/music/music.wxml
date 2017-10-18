@@ -1,0 +1,76 @@
+<view class="container">
+   <!--第一层：背景图背景图，高斯模糊-->
+  <view class="bg">
+    <!--image自定义属性mode scaleToFill不保持纵横比缩放图片，使图片的宽高完全拉伸至填满image元素  -->
+    <image class="poster" mode="scaleToFill" src="{{nowPlay.songImg}}"></image>
+  </view>
+  <!--第二层：灰色蒙层-->
+  <view class="bg-gray"></view>
+  <!--第三层：player层-->
+  <view style="display: {{listShow === true ? 'none' : ''}}">
+    <!--旋转图-->
+    <view class="rotate-disk-container">
+      <view class="rotate-disk {{pauseStatus === false ? 'rotate-360' : 'rotate-360-paused'}}">
+        <image class="poster" src="{{nowPlay.songImg}}"></image>
+      </view>
+    </view>
+    <!-- 歌名歌手操作-->
+    <view class="title-container">
+      <view class="title-left"></view>  
+      <view class="text"> 
+        <view class='songName'>{{nowPlay.songName}}</view>
+        <view class='singer'>{{nowPlay.singers}}</view>
+      </view>
+      <image src="../../img/list.png" class="icon-list" bindtap="changeList"></image>
+    </view>
+    <!-- 滑动块操作 -->
+    <view class="slider-container">
+      <text class="slider-time">{{currentPosition}}</text> 
+      <slider
+          value="{{sliderValue}}"
+          bindchange="bindSliderchange"
+          activeColor="#13beec"
+          style="width: 70%;margin: 0;"
+        />
+       <text class="slider-time">{{duration}}</text> 
+    </view>
+    <!-- 播放等按键操作 -->
+    <view class="operation-container">
+      <image src="../../img/prev.png" class="icon-prev" bindtap="prevMusic"></image>
+      <image
+        src="{{pauseStatus === false ? '../../img/pause.png' : '../../img/play.png'}}"
+        class="icon-play" bindtap="runMusic"
+        >
+        </image>
+      <image src="../../img/next.png" class="icon-next" bindtap="bindTapNext"></image>
+    </view>
+  </view>
+  <!--第四层：可滚动视图区域  列表页-->
+  <scroll-view
+    class="list"
+    scroll-y style="display: {{listShow === true ? '' : 'none'}}">
+    <image class="close-btn" src="../../img/close.png" bindtap="changeList"></image>
+    <view wx:for="{{playSongIds}}" wx:key="{{*this}}">
+      <view
+        id="{{index}}"
+        class="list-one {{index === audioIndex ? 'list-one-choose' : ''}}"
+        hover-class="list-one-choose"
+        bindtap="chooseMiusc"
+        data-index="{{index}}"
+        >
+        <view class="name">
+          <text class="list-index">{{index+1}}</text>
+        </view>
+        <image class="list-one-poster" src="{{item.songImg}}"></image>
+        <view class="list-one-right">
+          <view class="name1">{{item.songName}}</view>
+           <view class="author">{{item.singers}}</view> 
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+
+

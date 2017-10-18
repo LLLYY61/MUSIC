@@ -1,0 +1,20 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{*this}}">
+    <swiper-item>
+      <image src="{{item.picUrl}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="header">
+  <view class="head">{{title}}</view>
+</view>
+<view class="list">
+  <block wx:for="{{songList}}" wx:key="{{*this}}">
+    <view class="picture" bindtap="addPlayList" data-song="{{item}}">
+      <image src="{{baseImgUrl}}{{item.data.albummid}}.jpg" class="img"/>
+      <text class="name">{{item.data.songname}}</text>   
+    </view>  
+  </block>  
+</view>
+

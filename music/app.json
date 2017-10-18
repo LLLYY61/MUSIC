@@ -1,0 +1,45 @@
+{
+  "pages":[ 
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/music/music",
+    "pages/search/search"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "音乐",
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./img/home.png",
+        "selectedIconPath": "./img/home-select.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "音乐榜单",
+        "iconPath": "./img/toplist.png",
+        "selectedIconPath": "./img/toplist-select.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "我的音乐",
+        "iconPath": "./img/music.png",
+        "selectedIconPath": "./img/music-select.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "./img/search.png",
+        "selectedIconPath": "./img/search-select.png"
+      }
+    ]
+  }
+}

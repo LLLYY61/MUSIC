@@ -1,0 +1,16 @@
+<view class="bg">
+  <image src='{{Img}}' class='bgImg'/>  
+  <view class='bgColor'></view> 
+    <view class='text'> 
+      <view class='ListName'>{{ListName}}</view>
+      <view class='time'>{{update_time}} 更新</view> 
+      <image src='../../img/play1.png' class='play'/>  
+    </view>    
+  <view wx:for="{{songList}}" wx:key="{{*this}}" class='head' bindtap="addPlayList" data-song="{{item}}">
+    <text class='gray'>{{index+1}}</text> 
+    <view class='right'>
+      <view class="songname"> {{item.data.songname}}</view>
+      <view class='name'> {{item.data.singer[0].name}} . {{item.data.albumname}} . {{item.data.albumdesc}}</view>
+    </view>   
+  </view> 
+</view>

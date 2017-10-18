@@ -1,0 +1,14 @@
+<view class="bg">
+  <navigator class="list" wx:for="{{texts}}" wx:key="{{*this}}" open-type='navigate' url='../list/list?topid={{item.id}}'>
+    <image src='{{item.picUrl}}' />
+    <view class='title'>
+      <view class='toptitle'>{{item.topTitle}}</view>
+      <view wx:for="{{item.songList}}" wx:key="{{*this}}" class='song'>
+        <text class='gray'>{{index+1}}</text> 
+        <text> {{item.songname}}</text>
+        <text class='gray'> - {{item.singername}}</text>
+      </view>
+    </view>
+     <view class='right'> ></view> 
+  </navigator>
+</view>

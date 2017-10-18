@@ -1,0 +1,57 @@
+.head{
+  height: 120rpx;
+}
+.input{
+    padding-left: 20rpx;
+    height: 88rpx;
+    width: 500rpx;
+}
+.inputView{
+    width: 500rpx;
+    /*边界：大小1px, 为固体，为绿色*/
+    border:  1px solid #0e932e;
+    /*边界角的弧度*/
+    border-radius: 10rpx;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    margin-top:30rpx; 
+}
+.search{
+  /* height: 88rpx; */
+  width: 20%;
+  background-color:#0e932e; 
+  position: relative;
+  top: -89rpx;
+  left: 270rpx;
+}
+.lists{
+  height:120rpx;
+  margin-top: 30rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 2rpx solid #DDDDDD;
+}
+.list-one-poster{
+  margin-left: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.list-one-right{
+  position: relative;
+  top: -120rpx;
+  left: 150rpx;
+}
+.name1,.author{
+  padding-top: 10rpx;
+  width: 480rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.name1{
+  font-size: 40rpx;
+}
+.author{
+  color:#AAAAAA;
+  font-size: 32rpx;
+}

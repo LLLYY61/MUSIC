@@ -1,0 +1,209 @@
+/* 背景高斯模糊 整个背景图包括页面内所有元素 */
+page{
+  height:100%;
+} 
+
+.container{
+  height: 100%; 
+  overflow: hidden;  
+}
+.bg{
+   height: 100%; 
+   width: 100%; 
+}
+.bg image{
+   height: 100%; 
+   width: 100%; 
+  /* 高斯模糊  blur模糊度，值越大越模糊*/
+  filter: blur(40rpx);
+}
+.bg-gray{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(54, 43, 41, 0.1);
+}
+
+/* 音乐播放样式  */
+.rotate-disk-container{
+  position: absolute;
+  top: -30rpx;
+  height: 100%;
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.rotate-disk{
+  width: 600rpx;
+  height: 600rpx; 
+  border-radius: 600rpx;
+  overflow: hidden;
+  border: 20rpx solid rgba(54, 43, 41, 0.2); 
+}
+.poster{
+  width: 600rpx;
+  height: 600rpx;
+}
+.rotate-360{
+  animation: rotate 10s linear infinite;
+}
+.rotate-360-paused{
+  animation: rotate 10s linear infinite;
+  /* 属性规定动画暂停 */
+   animation-play-state: paused; 
+}
+@keyframes rotate
+{
+  0%   {transform: rotate(0deg);}
+  50%  {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
+
+
+/* 页面文本样式 */
+.title-container{
+  position: absolute;
+  top: 0;
+  height: 160rpx;
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;   
+}
+.title-left{
+  width: 60rpx;
+  height: 60rpx;
+}
+.text{
+  color: #fff;
+  text-align: center;
+}
+.singer{
+  margin-top: 20rpx;
+}
+.songName,.singer{
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.icon-list{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 30rpx 0 0;
+}
+
+/* 滑块样式 */
+.slider-container{
+  position: absolute;
+  bottom: 140rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.slider-time{
+  font-size: 32rpx;
+  display: block;
+  width: 19%;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+}
+/* 滑动块的点 */
+ .wx-slider-handle{
+  width: 18px!important;
+  height: 18px!important;
+  top: 5px!important;
+} 
+/* 按钮布局  */
+.operation-container{
+  position: absolute;
+  bottom: 0;
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.icon-prev{
+  width: 80rpx;
+  height: 80rpx;
+}
+.icon-play{
+  margin: 0 40rpx;
+  width: 98rpx;
+  height: 98rpx;
+}
+.icon-pause{
+  margin: 0 40rpx;
+  width: 98rpx;
+  height: 98rpx;
+}
+.icon-next{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 列表样式 */
+.list{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+.close-btn{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.list-one{
+  height: 160rpx;
+  display: flex;
+  padding: 0 30rpx;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list-one-poster{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+
+.list-one-choose{
+   background-color: rgba(54, 43, 41, 0.6); 
+} 
+.list-index{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+   background-color:#CC6666; 
+  text-align: center;
+  border-radius: 60rpx;
+  line-height: 60rpx;
+  margin-right: 20rpx;
+}
+.list-one-right{
+  margin: 0 0 0 30rpx;
+}
+.name1,.author{
+  color: #EEEEEE;
+  width: 480rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+
+

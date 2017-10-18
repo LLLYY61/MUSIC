@@ -1,0 +1,14 @@
+<view class="head">
+   <view class="inputView"> 
+    <input class="input"  type="text" name="song" placeholder="搜索歌曲、歌单、专辑" placeholder-style="color: gray" bindinput="songInput" />
+   </view> 
+  <button  bindtap="listenerLogin" class="search">搜索</button>
+</view>
+
+<view wx:for="{{songs}}" wx:key="{{*this}}" class="lists" bindtap="addPlayList" data-song="{{item}}">
+    <image class="list-one-poster" src="{{baseImgUrl}}{{item.albummid}}.jpg"></image>  
+    <view class="list-one-right">
+      <view class="name1">{{item.songname}}</view>
+        <view class="author">{{item.singer[0].name}}</view> 
+    </view>
+</view>

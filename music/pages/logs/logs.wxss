@@ -1,0 +1,43 @@
+page{
+  background-color: #EEEEEE;
+}
+.list{
+  width: 95%;
+  height: 222rpx; 
+  margin: 0 auto;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff; 
+}
+image{
+  width: 30%;
+  height: 222rpx; 
+  float: left;
+}
+.title{
+  float: left;
+  margin-left: 30rpx;
+  width: 420rpx;
+}
+.toptitle{
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+.song{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  width: 420rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.gray{
+  color: #999999;
+}
+.right{
+  color: #999999;
+  float: right;
+  margin-right: 20rpx;
+  position: relative;
+  top: 80rpx;
+}
